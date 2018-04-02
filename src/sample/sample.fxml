@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="482.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="482.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Calcular">
    <children>
-      <TextField prefHeight="139.0" prefWidth="346.0" />
+      <TextField fx:id="resultadoPantalla" prefHeight="139.0" prefWidth="346.0" style="-fx-border-color: #323232; -fx-border-width: 2;" />
       <Pane layoutX="-2.0" layoutY="140.0" prefHeight="342.0" prefWidth="346.0" style="-fx-background-color: #323232;">
          <children>
             <GridPane layoutX="7.0" layoutY="13.0" prefHeight="323.0" prefWidth="262.0">
@@ -28,22 +27,22 @@
                 <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="7" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="9" GridPane.columnIndex="2">
+                  <Button fx:id="siete" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="7" />
+                  <Button fx:id="nueve" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="9" GridPane.columnIndex="2">
                      <padding>
                         <Insets bottom="1.0" />
                      </padding>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="3" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="8" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="6" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="4" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="0" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="82.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="tres" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="3" GridPane.rowIndex="2" />
+                  <Button fx:id="cinco" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="ocho" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="8" GridPane.columnIndex="1" />
+                  <Button fx:id="seis" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="6" GridPane.rowIndex="1" />
+                  <Button fx:id="cuatro" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="4" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="dos" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="zero" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="0" GridPane.rowIndex="3" />
+                  <Button fx:id="punto" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="igual" mnemonicParsing="false" onAction="#Calcular" prefHeight="84.0" prefWidth="82.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                </children>
                <padding>
                   <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
@@ -61,14 +60,34 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="82.0" text="AC" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="82.0" text="/" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="82.0" text="X" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="82.0" text="-" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="82.0" text="+" GridPane.rowIndex="4" />
+                  <Button fx:id="ac" mnemonicParsing="false" onAction="#Calcular" prefHeight="80.0" prefWidth="82.0" styleClass="button2" text="AC">
+                     <GridPane.margin>
+                        <Insets top="4.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="division" mnemonicParsing="false" onAction="#Calcular" prefHeight="80.0" prefWidth="82.0" styleClass="button2" text="/" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets top="4.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="multiplicacion" mnemonicParsing="false" onAction="#Calcular" prefHeight="80.0" prefWidth="82.0" styleClass="button2" text="X" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets top="4.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="resta" mnemonicParsing="false" onAction="#Calcular" prefHeight="80.0" prefWidth="82.0" styleClass="button2" text="-" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets top="4.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="suma" mnemonicParsing="false" onAction="#Calcular" prefHeight="80.0" prefWidth="82.0" styleClass="button2" text="+" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets top="4.0" />
+                     </GridPane.margin>
+                  </Button>
                </children>
                <padding>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                  <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
                </padding>
             </GridPane>
          </children>
